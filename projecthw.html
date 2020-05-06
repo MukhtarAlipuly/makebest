@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="projecthw.css">
+	<title> Profile Editing</title>
+</head>
+<body>
+	<h3 class='profile title' id='profile_edit'> Your Profile </h3>
+	<p>Give some information</p>
+	<div class='content'> 
+	 <p class="name">
+	 	<i id="'name_text">Mukhtar</i>
+	 </p>
+	 
+
+	 <p class="surname">
+	    <i id="surname_text">Alipuly</i>
+	 </p>
+
+	 <p class="age">
+	    <i id="age_text">20</i>
+	 </p>
+
+	 <p class="info">
+	    <i id="info_text"> Biotechnologist, musician and etc...</i>
+	 </p>
+
+        <p>
+        	<a href="" id="info_link">Edit...</a>
+        </p>
+
+    </div>
+	
+<form action="">
+     <div id="name_block" style="display: none;">
+      <form action=''>
+     		<input type="text" name="name_field" placeholder="Name...">
+     		<input type="text" name="surname_field" placeholder="Surname...">
+     		<input type="text" name="age_field" placeholder="Age...">
+     		<input type="text" name="info_field" placeholder="Shortly about you...">
+
+     		<input type="submit" value="Save">
+      </form>
+	 </div>
+
+	 <script>
+	 	const infoLink = document.getElementById ('info_link');
+
+	 	const nameBlock = document.getElementById ('name_block');
+
+	 	const form = document.querySelector ('form');
+
+	 	infoLink.onclick = function (event) {
+          event.preventDefault();
+
+	 		if (name_block.style.display === 'none') {
+	 			name_block.style.display = 'inline-block';
+	 		} else {
+	 			name_block.style.display = 'none';
+	 		}
+
+	 		if (surname_block.style.display === 'none') {
+	 			surname_block.style.display = 'inline-block';
+	 		} else {
+	 			surname_block.style.display = 'none';
+	 		}
+
+	 		if (age_block.style.display === 'none') {
+	 			age_block.style.display = 'inline-block';
+	 		} else {
+	 			age_block.style.display = 'none';
+	 		}
+
+	 		if (info_block.style.display === 'none') {
+	 			info_block.style.display = 'inline-block';
+	 		} else {
+	 			info_block.style.display = 'none';
+	 		}
+	 	}
+
+
+	 	form.onsubmit = function (event) {
+	 		event.preventDefault();
+
+	 		document.getElementById('name_text').innerText = this.elements.name_field.value;
+	 		document.getElementById('surname_text').innerText = this.elements.surname_field.value;
+	 		document.getElementById('age_text').innerText = this.elements.age_field.value;
+	 		document.getElementById('info_text').innerText = this.elements.info_field.value;
+	 	}
+	 </script>
+</body>
+</html>

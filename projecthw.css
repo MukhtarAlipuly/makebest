@@ -1,0 +1,14 @@
+body {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h3#Your_Profile{
+	color: #FD4554;
+	font-size: 30px;
+}
+
+div.content, div#name_block, div#surname_block, div#age_block, div#info_block {
+	width: 50%;
+	display: inline-block;
+}
